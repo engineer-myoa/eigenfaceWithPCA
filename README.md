@@ -5,6 +5,16 @@
 Eigen face를 활용해 얼굴인식을 하기 위해서는 성능적 측면을 위해 고려되는 몇 가지 사항이 있다. 먼저 Eigen face 생성을 위해 공분산행렬, 고유값 계산이 필요하다. 이 과정에서 이미지 크기에 의존되는 차원의 연산이 필요한데, 공분산 행렬 계산 순서를 뒤집음으로 이미지 크기 대신 이미지 수에 의존되는 차원으로 사상하도록 바꾸어 연산 속도를 월등히 빠르게 높일 수 있다. 또한 고유벡터는 데이터를 특정 축에 사상하였을 때 분산 정도에 따라 해당 축의 중요성을 파악할 수 있는 특성을 가지는데 PCA(Principle Component Analyser)기법을 이용하여 에러를 최소화함과 동시에 필요없는 데이터를 절삭하도록 한다. 따라서 성능개선이 가능한 알고리즘들을 이용해 얼굴인식기를 구현한다.
 구현 결과물을 통해 Eigen face를 통한 인식기 자체가 고성능의 인식기는 아니지만 PCA 기법을 이해하기 쉽고 유용한 예제로서 쓰일 수 있음을 알 수 있다. 따라서 본 프로젝트에서는 OpenCV Contribute 라이브러리로 제공되는 Face 모듈을 사용하지 않고 Numpy를 주로 이용해 PCA기법을 적용한 Eigen face 얼굴 인식기 구현을 목표로한다.
 
+# Includes
+eigenfaces_prod.py
+```
+Describes how to work this algorithm using PCA.
+```
+facerecog_video.py
+```
+Face recognizer apply in video.
+```
+
 # How To Use It
 Dependency Python Reqirements
 ```
